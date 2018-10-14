@@ -11,7 +11,7 @@ public class Noise {
     private int seed;
 
     public Noise() {
-        this.seed = random.nextInt(1000000000);
+        this.seed = 100000;
     }
 
     public float generateTerrainNoise(float x, float z, float amplitude, float octaves, float roughness) {

@@ -20,10 +20,8 @@ public class Quad {
         int[] indices = {
                 0, 1, 2,
                 2, 3, 0,
-
-
         };
 
-        return new Mesh(positions, indices);
+        return new Mesh(positions, indices, new float[0], new float[0]);
     }
 }

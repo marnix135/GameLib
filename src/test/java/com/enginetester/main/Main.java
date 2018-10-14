@@ -21,6 +21,7 @@ public class Main extends Game {
     private Renderer renderer;
     private Camera camera;
     private Entity entity;
+    private Entity sun;
 
 
     private Main() {
@@ -32,24 +33,19 @@ public class Main extends Game {
 
     @Override
     public void init() {
-        setClearColor(new Color(255, 255, 255));
+        setClearColor(new Color(0, 0, 0));
 
         camera = new Camera(window, 50f, 0.1f, 1000.0f);
 
         scene = new Scene();
         renderer = new Renderer();
 
-        entity = new Entity(Cube.getMesh(), Material.TEST, new Color(0.0f, 0.0f, 0.0f), new Vector3f(0.0f), new Vector3f(0.0f, 0.0f, 0.0f), 1.0f);
-        scene.add(entity);
-        scene.add(new Terrain(500, 500));
-
-        for (int i = 0; i < 20; i++) {
-            try {
-                scene.add(new Entity(Cube.getMesh(), Material.TEST, new Texture("resources/textures/dirt.jpg"), new Vector3f(new Random().nextFloat() * 10.0f, 0.0f, new Random().nextFloat() * 10.0f), new Vector3f(0.0f, new Random().nextFloat() * 360, 1.0f), new Random().nextFloat() * 0.3f + 0.2f));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+        //Terrain terrain = new Terrain(500, 500);
+        //scene.add(terrain);
+        //System.out.println(terrain.getMesh().hasNormals());
+        //System.out.println(terrain.getMesh().getNormals().length);
+        //sun = new Entity(Cube.getMesh(), Material.TEST, new Color(1.0f, 0.0f, 0.0f), new Vector3f(250.0f, 100.0f, 250.0f), new Vector3f(0.0f), 1.0f);
+        //scene.add(sun);
 
         useControls(new FirstPerson(camera, window,1.0f, 0.6f, true));
     }

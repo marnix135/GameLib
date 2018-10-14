@@ -53,8 +53,6 @@ public class Entity {
         this.scale = scale;
 
         this.modelViewMatrix = new Matrix4f();
-
-        this.color = color;
     }
 
     public Entity(Mesh mesh, int material, Texture texture, Vector3f position, Vector3f rotation, float scale) {

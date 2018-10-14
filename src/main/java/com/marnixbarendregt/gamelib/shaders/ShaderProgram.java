@@ -20,7 +20,6 @@ public abstract class ShaderProgram {
     private int fragmentShaderId;
     private final Map<String, Integer> uniforms;
 
-
     public ShaderProgram(String vertexPath, String fragmentPath) {
         programId = glCreateProgram();
 

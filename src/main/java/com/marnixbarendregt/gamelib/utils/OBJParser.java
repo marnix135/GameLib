@@ -86,7 +86,7 @@ public class OBJParser {
         }
         int[] indicesArr;
         indicesArr = indices.stream().mapToInt((Integer v) -> v).toArray();
-        return new Mesh(posArr, indicesArr, textCoordArr);
+        return new Mesh(posArr, indicesArr, textCoordArr, normArr);
     }
 
     private static void processTriangleVertex(IdxGroup indices, List<Vector2f> textCoordList,
